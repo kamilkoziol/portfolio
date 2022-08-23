@@ -9,3 +9,7 @@
 .hamburger-layer {
   @apply w-full h-1 bg-white rounded-full transition duration-500 ease-in-out;
 }
+
+.sidenav-item {
+  @apply p-4 transition duration-500;
+}
