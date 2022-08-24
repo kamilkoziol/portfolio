@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { addAndRemoveClasses } from "../utils";
 
 const Hamburger = ({ hamburgerOpen, setHamburgerOpen }) => {
@@ -8,11 +8,10 @@ const Hamburger = ({ hamburgerOpen, setHamburgerOpen }) => {
 
   const handleHamburgerOpenClose = () => {
     setHamburgerOpen((prev) => !prev);
-    moveSidenav();
   };
 
-  const moveSidenav = () => {
-    if (hamburgerOpen) {
+  useEffect(() => {
+    if (!hamburgerOpen) {
       addAndRemoveClasses(
         ["rotate-45", "translate-y-4"],
         null,
@@ -37,12 +36,12 @@ const Hamburger = ({ hamburgerOpen, setHamburgerOpen }) => {
         h3.current
       );
     }
-  };
+  }, [hamburgerOpen]);
 
   return (
     <div
       id="hamburger"
-      className="w-8 h-8 flex flex-col justify-between cursor-pointer lg:hidden"
+      className="w-8 h-8 flex flex-col justify-between cursor-pointer bg:hidden"
       onClick={handleHamburgerOpenClose}
     >
       <div className="hamburger-layer transform" ref={h1}></div>
