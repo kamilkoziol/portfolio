@@ -37,6 +37,15 @@ const Navbar = (props) => {
     return () => window.removeEventListener("scroll", handleHideNavbar);
   });
 
+  function handleScroll(section) {
+    const my_element = document.getElementById(section);
+    my_element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+
   return (
     <div>
       <header
@@ -44,19 +53,32 @@ const Navbar = (props) => {
         className="px-16 bg-primaryBackground fixed top-0 left-0 w-full h-28 z-20 transform transition duration-500"
       >
         <nav className="flex justify-between items-center w-full h-full max-w-screen-lg mx-auto">
-          <div className="">logo</div>
+          <div
+            className="cursor-pointer"
+            onClick={() => handleScroll("hero")}
+          >
+            logo
+          </div>
           <Hamburger
             hamburgerOpen={props.hamburgerOpen}
             setHamburgerOpen={props.setHamburgerOpen}
           />
-          <ul className="bg:flex items-center justify-between hidden">
-            <li className="before:content-['01.'] nav-item">About</li>
-            <li className="before:content-['02.'] nav-item">Projects</li>
-            <li className="before:content-['03.'] nav-item">Skills</li>
-            <li className="before:content-['04.'] nav-item">Education</li>
-            <li className="before:content-['05.'] nav-item">Contact</li>
-            <li className="ml-6">Resume</li>
-          </ul>
+          <div className="bg:flex items-center justify-between hidden">
+            <div
+              onClick={() => handleScroll("about")}
+              data-target="about"
+              className="before:content-['01.'] nav-item"
+            >
+              About
+            </div>
+            <div className="before:content-['02.'] nav-item">Projects</div>
+            <div className="before:content-['03.'] nav-item">Skills</div>
+            <div className="before:content-['04.'] nav-item">
+              Education
+            </div>
+            <div className="before:content-['05.'] nav-item">Contact</div>
+            <div className="nav-item">Resume</div>
+          </div>
         </nav>
       </header>
       <SideNav

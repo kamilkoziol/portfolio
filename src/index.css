@@ -13,3 +13,7 @@
 .sidenav-item {
   @apply p-4 transition duration-500;
 }
+
+html {
+  scroll-behavior: smooth;
+}

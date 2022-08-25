@@ -22,6 +22,13 @@ module.exports = {
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
+      code: [
+        "Consolas",
+        "Monaco",
+        "Lucida Console,Liberation Mono",
+        "DejaVu Sans Mono,Bitstream Vera Sans Mono",
+        "Courier New",
+      ],
     },
   },
   plugins: [],
