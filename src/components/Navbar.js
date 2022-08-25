@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { addAndRemoveClasses } from "../utils";
 import Hamburger from "./Hamburger";
 import SideNav from "./SideNav";
+import { handleScroll } from "../utils";
 
 const Navbar = (props) => {
   const [lastPos, setLastPos] = useState(window.scrollY);
@@ -37,15 +38,6 @@ const Navbar = (props) => {
     return () => window.removeEventListener("scroll", handleHideNavbar);
   });
 
-  function handleScroll(section) {
-    const my_element = document.getElementById(section);
-    my_element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  }
-
   return (
     <div>
       <header
@@ -71,10 +63,15 @@ const Navbar = (props) => {
             >
               About
             </div>
-            <div className="before:content-['02.'] nav-item">Projects</div>
+            <div
+              onClick={() => handleScroll("projects")}
+              className="before:content-['02.'] nav-item"
+            >
+              Projects
+            </div>
             <div className="before:content-['03.'] nav-item">Skills</div>
             <div className="before:content-['04.'] nav-item">
-              Education
+              Work and education
             </div>
             <div className="before:content-['05.'] nav-item">Contact</div>
             <div className="nav-item">Resume</div>

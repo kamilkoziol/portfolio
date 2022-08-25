@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
         <div className="max-w-[250px] hidden sm:block">
-          <img src={photo1}></img>
+          <img alt="it's me mario" src={photo1}></img>
         </div>
       </div>
     </section>
