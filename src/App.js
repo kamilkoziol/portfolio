@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { addAndRemoveClasses } from "./utils";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 function App() {
   const [hamburgerOpen, setHamburgerOpen] = useState(true);
@@ -23,56 +26,21 @@ function App() {
   }
 
   return (
-    <div className="bg-primaryBackground text-textColor">
+    <div className="bg-primaryBackground text-primaryTextColor font-poppins">
       <Navbar
         hamburgerOpen={hamburgerOpen}
         setHamburgerOpen={setHamburgerOpen}
       />
       <div
         ref={content}
-        className="transition duration-500"
+        className="transition duration-500 px-8 md:px-20 lg:px-48 mx-auto w-full min-h-screen m-w"
         onClick={handleContentClick}
       >
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
-        <div className="text-9xl">content</div>
+        <main>
+          <Hero></Hero>
+          <About></About>
+          <Projects />
+        </main>
       </div>
     </div>
   );

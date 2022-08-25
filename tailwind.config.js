@@ -16,8 +16,12 @@ module.exports = {
       colors: {
         primaryBackground: "#3C493F",
         secondaryBackground: "#7E8D85",
-        textColor: "#B3BFB8",
+        primaryTextColor: "#B3BFB8",
+        secondaryTextColor: "#A2E3C4",
       },
+    },
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
     },
   },
   plugins: [],

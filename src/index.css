@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav-item {
-  @apply p-6 transition duration-500 hover:text-gray-500;
+  @apply p-6 transition duration-500 hover:text-gray-500 cursor-pointer;
 }
 
 .hamburger-layer {
