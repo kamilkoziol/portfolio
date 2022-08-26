@@ -18,7 +18,6 @@ const Navbar = (props) => {
         addAndRemoveClasses(null, "-translate-y-full", navBar.current);
       }
       if (currentPos === 0) {
-        console.log("inside");
         addAndRemoveClasses(
           "h-28",
           ["h-20", "shadow-lg", "opacity-80"],

@@ -19,6 +19,9 @@ module.exports = {
         primaryTextColor: "#B3BFB8",
         secondaryTextColor: "#A2E3C4",
       },
+      boxShadow: {
+        card: "9px 8px 9px 0px rgba(66, 68, 90, 1)",
+      },
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],

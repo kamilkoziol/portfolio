@@ -18,8 +18,40 @@ html {
   scroll-behavior: smooth;
 }
 .slick-list {
-  margin: 0 -5px;
+  margin: 0 -20px;
+  height: auto;
 }
 .slick-slide > div {
-  padding: 0 5px;
+  padding: 0 20px;
+}
+
+.back-card {
+  transition: top 500ms ease-in-out 0s, left 1s ease-in-out 500ms;
+}
+
+.back-card-fade {
+  transition: left 1s ease-in-out 0ms, top 500ms ease-in-out 1s,
+    z-index 0s linear 1500ms;
+}
+
+.back-card-transition {
+  z-index: 50;
+  top: 0;
+  left: 100%;
+}
+
+.front-card-transition {
+  z-index: 100;
+  position: absolute;
+  box-shadow: none;
+}
+
+.front-card {
+  transition: box-shadow 500ms linear 1500ms;
+}
+
+.front-card-fade {
+  transition: box-shadow 500ms linear 0ms, z-index 0s linear 1500ms,
+    position 0ms linear 1500ms;
+  position: relative;
 }
