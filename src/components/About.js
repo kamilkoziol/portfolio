@@ -13,10 +13,10 @@ const About = () => {
       <div className="sm:grid sm:grid-cols-3 gap-10">
         <div className="col-span-2">
           <p className="max-w-xl mt-6 text-lg">
-            Hello, I'm Kamil. I enjoy programming since I was a little kid.
-            I have started with C++ (I was a child thus so didnt understand
-            much tho). Then I moved to Java, after that to Python and
-            eventually to JS.
+            Hello, I'm Kamil. I enjoy programming since I was a little kid
+            (I'm pretty old tho). I have started with C++ (I was a child
+            thus so didnt understand much tho). Then I moved to Java, after
+            that to Python and eventually to JS.
           </p>
           <p className="max-w-xl mt-6 text-lg">
             Profesionally I started with high school student tutoring high
