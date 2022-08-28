@@ -11,6 +11,32 @@ const Projects = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const simpleProjects = [
@@ -92,9 +118,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col items-start justify-center mx-auto max-w-4xl"
+      className="min-h-screen flex flex-col items-start justify-center mx-auto max-w-4xl mt-16"
     >
-      <h2 className="text-secondaryTextColor text-right font-bold text-2xl w-full mb-10 ">
+      <h2 className="text-secondaryTextColor text-right font-bold text-2xl w-full mb-6 ">
         <span className="before:h-[1px] before:w-40 before:-translate-y-[7px] before:-translate-x-6 before:bg-primaryTextColor before:inline-block">
           Projects
         </span>

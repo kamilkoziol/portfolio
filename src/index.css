@@ -125,3 +125,7 @@ html {
     transform: rotateX(270deg) rotateY(360deg) rotateZ(-360deg); /*5*/
   }
 }
+
+.skill-small-bar {
+  @apply h-full w-full bg-secondaryTextColor rounded;
+}

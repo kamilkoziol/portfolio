@@ -2,13 +2,30 @@
 
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+const newScreens = Object.entries(defaultTheme.screens).reduce(
+  (breakpoints, [label, value]) => {
+    if (label == "lg") {
+      breakpoints["bg"] = "900px";
+    }
+    breakpoints[label] = value;
+    return breakpoints;
+  },
+  {}
+);
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./src/*.{js}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      bg: "900px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+
     extend: {
-      screens: {
-        bg: "900px",
-      },
       transitionProperty: {
         DEFAULT: defaultTheme.transitionProperty.DEFAULT + ", height, ",
         filter: "filter",

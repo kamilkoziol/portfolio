@@ -5,6 +5,7 @@ import { addAndRemoveClasses } from "./utils";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Skills from "./components/Skills.js";
 
 function App() {
   const [hamburgerOpen, setHamburgerOpen] = useState(true);
@@ -37,9 +38,10 @@ function App() {
         onClick={handleContentClick}
       >
         <main>
-          <Hero></Hero>
-          <About></About>
+          <Hero />
+          <About />
           <Projects />
+          <Skills />
         </main>
       </div>
     </div>

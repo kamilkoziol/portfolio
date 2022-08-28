@@ -8,7 +8,7 @@ const Cube = () => {
   const tf = require("../images/logos/tensorflow.png");
   const github = require("../images/logos/github.png");
   return (
-    <div className="w-32 h-32 flex justify-center items-center cube-container">
+    <div className="w-32 h-32 hidden justify-end items-center cube-container bg:flex">
       <div className="relative text-4xl cube w-20 h-20 flex justify-center items-center">
         <div className="cube-side cube-front">
           <img alt="react-logo" src={react} />

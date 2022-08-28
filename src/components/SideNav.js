@@ -48,7 +48,15 @@ const SideNav = ({ hamburgerOpen, setHamburgerOpen }) => {
         >
           Projects
         </div>
-        <div className="before:content-['03.'] sidenav-item">Skills</div>
+        <div
+          onClick={() => {
+            setHamburgerOpen(true);
+            handleScroll("skills");
+          }}
+          className="before:content-['03.'] sidenav-item"
+        >
+          Skills
+        </div>
         <div className="before:content-['04.'] sidenav-item">
           Work and education
         </div>
