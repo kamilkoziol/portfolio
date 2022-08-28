@@ -14,7 +14,7 @@ Some things have to be done:
 
 ## Deployment info
 
-To start simply execute 'npm start' however please don't run my website anywhere.
+To start simply execute `npm start` however please don't run my website anywhere.
 It's hosted on github pages, feel free to visit:
 
 https://kamilkoziol.github.io/portfolio
