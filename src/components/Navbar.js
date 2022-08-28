@@ -3,6 +3,7 @@ import { addAndRemoveClasses } from "../utils";
 import Hamburger from "./Hamburger";
 import SideNav from "./SideNav";
 import { handleScroll } from "../utils";
+import resume from "../download/kamil_koziol_cv.pdf";
 
 const Navbar = (props) => {
   const [lastPos, setLastPos] = useState(window.scrollY);
@@ -87,7 +88,7 @@ const Navbar = (props) => {
             >
               Contact
             </div>
-            <a href="../download/kamil_koziol_cv.pdf" download>
+            <a href={resume} download="kamil_koziol_cv.pdf">
               <div className="border border-secondaryTextColor font-bold text-secondaryTextColor font-code px-6 py-2 rounded-md">
                 Resume
               </div>

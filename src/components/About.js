@@ -1,5 +1,5 @@
 import React from "react";
-import photo1 from "../images/1.jpg";
+import photo1 from "../images/me.jpg";
 
 const About = () => {
   return (
@@ -51,8 +51,14 @@ const About = () => {
             </div>
           </p>
         </div>
-        <div className="max-w-[250px] hidden sm:block">
-          <img alt="it's me mario" src={photo1}></img>
+        <div>
+          <div className="hidden sm:block relative h-80 after:border-2 after:border-secondaryTextColor after:w-full after:h-full after:translate-x-4 after:translate-y-4 after:absolute after:rounded-lg hover:after:translate-x-2 hover:after:translate-y-2 after:transition after:duration-200">
+            <img
+              className="absolute z-20 object-cover w-full h-full rounded-lg"
+              alt="it's me mario"
+              src={photo1}
+            ></img>
+          </div>
         </div>
       </div>
     </section>
