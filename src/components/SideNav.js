@@ -66,8 +66,20 @@ const SideNav = ({ hamburgerOpen, setHamburgerOpen }) => {
         >
           Work and education
         </div>
-        <div className="before:content-['05.'] sidenav-item">Contact</div>
-        <div className="sidenav-item">Resume</div>
+        <div
+          onClick={() => {
+            setHamburgerOpen(true);
+            handleScroll("contact");
+          }}
+          className="before:content-['05.'] sidenav-item"
+        >
+          Contact
+        </div>
+        <a href="../download/kamil_koziol_cv.pdf" download>
+          <div className="border border-secondaryTextColor font-bold text-secondaryTextColor font-code px-6 py-2 rounded-md">
+            Resume
+          </div>
+        </a>
       </div>
     </div>
   );

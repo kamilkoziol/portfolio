@@ -12,7 +12,7 @@ const WorkTimeline = () => {
     <div className="w-full m-6 mb-16 flex items-center justify-center">
       <VerticalTimeline lineColor="#7E8D85">
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work hover:scale-105 transition duration-300"
           contentStyle={{ background: "#7E8D85", color: "#A2E3C4" }}
           contentArrowStyle={{ borderRight: "7px solid  #7E8D85" }}
           date="&nbsp;&nbsp; 2017 - 2022"
@@ -37,7 +37,7 @@ const WorkTimeline = () => {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work hover:scale-105 transition duration-300"
           contentStyle={{ background: "#7E8D85", color: "#A2E3C4" }}
           contentArrowStyle={{ borderRight: "7px solid  #7E8D85" }}
           date="2017 - 2018 &nbsp;&nbsp;"

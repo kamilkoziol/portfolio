@@ -39,19 +39,6 @@ const ProjectCard = ({ project }) => {
     }, 1500);
   }
 
-  function handleClick() {
-    addAndRemoveClasses(
-      null,
-      [("back-card-fade", "back-card", "back-card-transition")],
-      back.current
-    );
-    addAndRemoveClasses(
-      null,
-      ["front-card-fade", "front-card", "front-card-transition"],
-      front.current
-    );
-  }
-
   return (
     <a
       href={project.link}

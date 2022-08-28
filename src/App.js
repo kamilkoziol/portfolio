@@ -8,6 +8,7 @@ import About from "./components/About";
 import Skills from "./components/Skills.js";
 import Socials from "./components/Socials";
 import Work from "./components/Work";
+import Contact from "./components/Contact";
 
 function App() {
   const [hamburgerOpen, setHamburgerOpen] = useState(true);
@@ -45,6 +46,7 @@ function App() {
           <Projects />
           <Skills />
           <Work />
+          <Contact />
         </main>
       </div>
       <Socials />

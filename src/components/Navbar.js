@@ -48,7 +48,8 @@ const Navbar = (props) => {
             className="cursor-pointer"
             onClick={() => handleScroll("hero")}
           >
-            logo
+            <span className="text-3xl text-slate-200">K</span>
+            <span className="text-3xl text-secondaryTextColor">K</span>
           </div>
           <Hamburger
             hamburgerOpen={props.hamburgerOpen}
@@ -80,8 +81,17 @@ const Navbar = (props) => {
             >
               Work and education
             </div>
-            <div className="before:content-['05.'] nav-item">Contact</div>
-            <div className="nav-item">Resume</div>
+            <div
+              onClick={() => handleScroll("contact")}
+              className="before:content-['05.'] nav-item"
+            >
+              Contact
+            </div>
+            <a href="../download/kamil_koziol_cv.pdf" download>
+              <div className="border border-secondaryTextColor font-bold text-secondaryTextColor font-code px-6 py-2 rounded-md">
+                Resume
+              </div>
+            </a>
           </div>
         </nav>
       </header>

@@ -22,7 +22,7 @@ const Skill = ({ name, level }) => {
     }
     const observer = new IntersectionObserver(obsFn, { threshold: 1 });
     observer.observe(skillBar.current);
-  }, []);
+  }, [level]);
 
   //   useEffect(() => {
   //     console.log(levelProgress);
