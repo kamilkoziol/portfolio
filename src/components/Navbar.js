@@ -74,7 +74,10 @@ const Navbar = (props) => {
             >
               Skills
             </div>
-            <div className="before:content-['04.'] nav-item">
+            <div
+              onClick={() => handleScroll("work")}
+              className="before:content-['04.'] nav-item"
+            >
               Work and education
             </div>
             <div className="before:content-['05.'] nav-item">Contact</div>
